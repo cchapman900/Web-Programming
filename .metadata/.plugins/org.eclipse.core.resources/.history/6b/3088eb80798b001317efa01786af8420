@@ -1,0 +1,18 @@
+/*
+ * BMCC CIS-485
+ * Spring 2014
+ * Chris Chapman
+ * HW1-1 subclass
+ * 
+ * Rectangle Problem
+ */
+
+public class hw1_1 extends hw1 {
+
+	public static void main(String[] args) {
+		getRectDimensions();
+		displayArea();
+		displayPerimeter();
+	}
+
+}

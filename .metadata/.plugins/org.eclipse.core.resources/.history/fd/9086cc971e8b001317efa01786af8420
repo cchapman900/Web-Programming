@@ -1,0 +1,12 @@
+public class hw1_1 extends hw1 {
+
+	public static void main(String[] args) {
+		getRectDimensions();
+		System.out.println("Area: ");
+		System.out.print(rectangle.getArea());
+		System.out.println();
+		System.out.println("Perimeter: ");
+		System.out.print(rectangle.getPerimeter());
+	}
+
+}

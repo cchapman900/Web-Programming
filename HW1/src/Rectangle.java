@@ -1,33 +1,68 @@
+/*
+ * BMCC CIS 485 - Web Programming
+ * Spring 2014
+ * Chris Chapman
+ * HW1
+ * 
+ * Rectangle Class
+ */
+
 
 public class Rectangle {
 	
-	private static double length;
-	private static double width;
+	//Instance Variables
+	private double length;
+	private double width;
 	
+	//Constructors
 	public Rectangle(){
-		length = 0.0;
+		setLength(0.0);
 		width = 0.0;
 	}
 	
 	public Rectangle(double l, double w){
-		length = l;
-		width = w;
+		this.setLength(l);
+		this.width = w;
 	}
 	
-	public static double getPerimeter(){
-		return (length * 2) + (width * 2);
+	//Utility functions
+	public double getArea(){
+		
+		return this.length * this.width;
 	}
 	
-	public static double getArea(){
-		return (length * width);
+	public double getPerimeter(){
+		
+		return (this.length * 2) + (this.width * 2);
 	}
-
-	public static void displayPerimeter(){
+	
+	//Display Functions
+	public void displayPerimeter(){
+		System.out.print("Perimeter: ");
 		System.out.println(getPerimeter());
 	}
 	
-	public static void displayArea(){
+	public void displayArea(){
+		System.out.print("Area: ");
 		System.out.println(getArea());
+	}
+	
+	//Getters and Setters
+
+	public double getLength() {
+		return length;
+	}
+	
+	public double getWidth() {
+		return width;
+	}
+
+	public void setLength(double length) {
+		this.length = length;
+	}
+	
+	public void setWidth(double width) {
+		this.width = width;
 	}
 
 }

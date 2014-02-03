@@ -1,0 +1,40 @@
+/*
+ * BMCC CIS-485
+ * Spring 2014
+ * Chris Chapman
+ * HW1
+ * 
+ * Square and Rectangle Solving Problems
+ */
+
+import java.util.Scanner;
+
+
+public class hw1 {
+
+	static Rectangle rectangle = new Rectangle(1, 1);
+	static Scanner scanner = new Scanner(System.in);
+	
+	public static void getRectDimensions() {
+		System.out.println("Please enter length:");
+		rectangle.setLength(scanner.nextInt());
+		System.out.println("Please enter width:");
+		rectangle.setWidth(scanner.nextInt());
+	}
+	
+	public static void getSquareDimensions() {
+		System.out.println("Please enter side length:");
+		int side = scanner.nextInt();
+		rectangle.setLength(side);
+		rectangle.setWidth(side);
+	}
+	
+	public static void displayArea() {
+		System.out.println(rectangle.getArea());
+	}
+
+	public static void displayPerimeter() {
+		System.out.println(rectangle.getArea());
+	}
+
+}

@@ -1,0 +1,8 @@
+import java.util.Scanner;;
+
+
+public class hw1 {
+
+	Scanner scanner = new Scanner(System.in);
+
+}

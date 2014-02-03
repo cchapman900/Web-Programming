@@ -1,0 +1,5 @@
+
+public class SubMenu {
+	String displayTitle;
+	Object menuFunction;
+}

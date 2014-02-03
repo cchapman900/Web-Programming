@@ -1,0 +1,51 @@
+/*
+ * BMCC CIS 485 - Web Programming
+ * Spring 2014
+ * Chris Chapman
+ * HW1
+ * 
+ * hw1_3 Rectangle Main Menu
+ * 
+ * Continuously calculates the area, perimeter 
+ * or both values of a rectangle until the user exits.
+ * 
+ */
+
+public class hw1_3 extends hw1 {
+
+	public static void main(String[] args) {
+		
+		int choice = 0;
+		
+		while (choice != 4) {
+			if (choice == 1){
+				rectangleProblem("perimeter");
+				choice = 0;
+			} 
+			else if (choice == 2) {
+				rectangleProblem("area");
+				choice = 0;
+			}
+			else if (choice == 3) {
+				rectangleProblem("both");
+				choice = 0;
+			} 
+			else {
+				System.out.println("Rectangle Problem");
+				System.out.println("1. Calculate Perimeter");
+				System.out.println("2. Calculate Area");
+				System.out.println("3. Calculate Area and Perimeter");
+				System.out.println("4. Exit");
+				System.out.println();
+				System.out.println("Choice (1-4):");
+				System.out.println();
+				
+				choice = scanner.nextInt();
+				
+			}
+			
+		}
+
+	}
+
+}

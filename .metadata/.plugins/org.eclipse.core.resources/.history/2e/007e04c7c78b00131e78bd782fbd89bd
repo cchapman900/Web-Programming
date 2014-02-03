@@ -1,0 +1,7 @@
+
+public class RectMenu extends Menu {
+	
+	switch (menuItem) {
+	case 1:
+	}
+}

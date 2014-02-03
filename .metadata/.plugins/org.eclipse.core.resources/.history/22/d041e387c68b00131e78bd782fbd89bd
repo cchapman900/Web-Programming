@@ -1,0 +1,14 @@
+/*
+ * BMCC CIS 485 - Web Programming
+ * Spring 2014
+ * Chris Chapman
+ * HW1
+ * 
+ * Menu Class
+ */
+
+
+public class Menu {
+	String title;
+	
+}

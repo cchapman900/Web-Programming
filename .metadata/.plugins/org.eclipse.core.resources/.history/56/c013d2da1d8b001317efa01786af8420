@@ -1,0 +1,60 @@
+/*
+ * BMCC CIS-485
+ * Spring 2014
+ * Chris Chapman
+ * HW1-3 subclass
+ * 
+ * Rectangle Main Menu
+ */
+
+public class hw1_3 extends hw1 {
+
+	public static void main(String[] args) {
+		
+		displayRectMenu();
+
+	}
+	
+	public static void displayRectMenu() {
+		int choice = 0;
+
+		System.out.println();
+		System.out.println();
+		System.out.println("Rectangle Main Menu:");
+		System.out.println("1. Calculate Area");
+		System.out.println("2. Calculate Perimeter");
+		System.out.println("3. Calculate Area and Perimeter");
+		System.out.println("4. Exit");
+		System.out.println();
+		System.out.println(">");
+		choice = scanner.nextInt();
+		
+		//error checking for invalid number
+		while ((choice > 4) || (choice < 1)) {
+			System.out.println("Invalid entry.");
+			System.out.println();
+			System.out.println(">");
+			choice = scanner.nextInt();
+		}
+		
+		switch (choice) {
+			case 1: 
+				getRectDimensions();
+				displayArea();
+				displayRectMenu();
+			case 2: 
+				getRectDimensions();
+				displayPerimeter();
+				displayRectMenu();
+			case 3: 
+				getRectDimensions();
+				displayArea();
+				displayPerimeter();
+				displayRectMenu();
+			case 4: 
+				System.out.println("Thank you!");
+				return;
+		}
+	}
+
+}

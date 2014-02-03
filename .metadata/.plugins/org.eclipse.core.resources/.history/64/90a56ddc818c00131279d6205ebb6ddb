@@ -1,0 +1,73 @@
+/*
+ * BMCC CIS 485 - Web Programming
+ * Spring 2014
+ * Chris Chapman
+ * HW1
+ * 
+ * hw1 SuperClass
+ * 
+ */
+
+import java.util.Scanner;
+
+
+public class hw1 {
+	
+	//Scanner to collect user input
+	static Scanner scanner = new Scanner(System.in);
+	
+	//Main Rectangle to perform calculations on
+	static Rectangle rectangle = new Rectangle();
+
+	//Create Rectangle from user input
+	public static void newRectFromConsole() {
+		System.out.println("Please enter length:");
+		double length = scanner.nextDouble();
+		System.out.println("Please enter width");
+		double width = scanner.nextDouble();
+		rectangle.setLength(length);
+		rectangle.setWidth(width);
+	}
+	
+	//Create Square from user input
+	public static void newSquareFromConsole() {
+		System.out.println("Please enter side length:");
+		double side = scanner.nextDouble();
+		rectangle.setLength(side);
+		rectangle.setWidth(side);
+	}
+	
+	//hw1_1 method and Rectangle Problem Submenu
+	public static void rectangleProblem(String areaOrPerimeter){
+		
+		//Instantiate Rectangle from user input
+		newRectFromConsole(); 
+
+		displayAreaAndOrPerimeter(areaOrPerimeter);
+		
+	}
+
+	//hw1_2 method and Square Problem Submenu
+	public static void squareProblem(){
+		
+		squareProblem("both"); //calculate both Area and Perimeter by default
+		
+	}
+
+	//hw1_2 method and Square Problem Submenu
+	public static void squareProblem(String areaOrPerimeter){
+		
+		//Instantiate Square from user input
+		newSquareFromConsole(); 
+
+		displayAreaAndOrPerimeter(areaOrPerimeter);
+		
+	}
+	
+	public static void displayAreaAndOrPerimeter (String areaOrPerimeter){
+
+		//display Area and/or Perimeter
+		if(areaOrPerimeter != "perimeter") rectangle.displayArea();
+		if(areaOrPerimeter != "area") rectangle.displayPerimeter();
+	}
+}

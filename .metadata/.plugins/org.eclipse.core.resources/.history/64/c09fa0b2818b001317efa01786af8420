@@ -1,0 +1,15 @@
+
+public class Rectangle {
+	
+	private static float length;
+	private static float width;
+	
+	public static float getPerimeter(){
+		return (length * 2) + (width * 2);
+	}
+	
+	public static float getArea(){
+		return (length * width);
+	}
+
+}

@@ -1,0 +1,10 @@
+
+public class MenuItem {
+	String title;
+	Object function;
+	
+	public MenuItem (String menuTitle, Object menuFunction){
+		title = menuTitle;
+		function = menuFunction;
+	}
+}

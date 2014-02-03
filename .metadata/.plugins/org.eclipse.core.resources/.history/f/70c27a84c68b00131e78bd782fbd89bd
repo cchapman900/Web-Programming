@@ -1,0 +1,7 @@
+
+public class MenuItem {
+	
+	String title;
+	
+	//store function
+}

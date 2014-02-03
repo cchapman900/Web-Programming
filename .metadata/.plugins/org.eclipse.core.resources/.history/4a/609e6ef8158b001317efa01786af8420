@@ -1,0 +1,21 @@
+import java.util.Scanner;;
+
+
+public class hw1_2 {
+	
+	static Rectangle square;
+	static Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		System.out.println("Please enter length:");
+		int side = scanner.nextInt();
+		square.setLength(side);
+		square.setWidth(side);
+		System.out.println("Area: ");
+		System.out.print(square.getArea());
+		System.out.println();
+		System.out.println("Perimeter: ");
+		System.out.print(square.getPerimeter());
+	}
+
+}

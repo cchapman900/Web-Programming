@@ -1,0 +1,5 @@
+
+public class rectangle {
+	int length;
+	int width;
+}

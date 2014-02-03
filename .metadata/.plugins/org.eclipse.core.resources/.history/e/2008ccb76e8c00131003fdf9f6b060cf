@@ -1,0 +1,12 @@
+
+public class RectMenu {
+	MenuItem[] menuItems;
+	
+	String test = new String("Hello");
+	
+	MenuItem testMenuItem = new MenuItem(test, testFunction());
+	
+	public static void testFunction(){
+		System.out.println("Hello");
+	}
+}

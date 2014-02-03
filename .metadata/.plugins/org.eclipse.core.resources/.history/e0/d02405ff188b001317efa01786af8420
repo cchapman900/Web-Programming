@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+
+public class hw1 {
+
+	static Rectangle rectangle = new Rectangle(1, 1);
+	static Scanner scanner = new Scanner(System.in);
+	
+	public static void getRectDimensions() {
+		System.out.println("Please enter length:");
+		rectangle.setLength(scanner.nextInt());
+		System.out.println("Please enter width:");
+		rectangle.setWidth(scanner.nextInt());
+	}
+
+}

@@ -1,0 +1,14 @@
+
+public class hw1_1 extends hw1{
+
+	public static void main (String[] args){
+		
+		//Instantiate Rectangle from user input
+		newRectFromConsole(); 
+		
+		//display Area and Perimeter
+		rectangle.displayArea();
+		rectangle.displayPerimeter();
+	}
+	
+}

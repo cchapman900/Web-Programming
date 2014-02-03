@@ -1,0 +1,11 @@
+import java.util.Scanner;
+rectangle
+
+int length;
+
+
+public class hw1 {
+
+	Scanner scanner = new Scanner(System.in);
+
+}

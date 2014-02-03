@@ -1,0 +1,34 @@
+/*
+ * BMCC CIS 485 - Web Programming
+ * Spring 2014
+ * Chris Chapman
+ * HW1
+ * 
+ * hw1 SuperClass
+ * 
+ */
+
+import java.util.Scanner;
+
+
+public class hw1 {
+	
+	static Rectangle rectangle = new Rectangle();
+	static Scanner scanner = new Scanner(System.in);
+
+	public static void newRectFromConsole() {
+		System.out.println("Please enter length:");
+		double length = scanner.nextDouble();
+		System.out.println("Please enter width");
+		double width = scanner.nextDouble();
+		rectangle.setLength(length);
+		rectangle.setWidth(width);
+	}
+	
+	public static Rectangle newSquareFromConsole() {
+		System.out.println("Please enter side length:");
+		double side = scanner.nextDouble();
+		return new Rectangle(side, side);
+	}
+	
+}

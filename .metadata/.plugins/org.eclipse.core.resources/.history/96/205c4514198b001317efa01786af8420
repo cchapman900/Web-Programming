@@ -1,0 +1,16 @@
+public class hw1_2 extends hw1 {
+	
+
+	public static void main(String[] args) {
+		System.out.println("Please enter side:");
+		int side = scanner.nextInt();
+		rectangle.setLength(side);
+		rectangle.setWidth(side);
+		System.out.println("Area: ");
+		System.out.print(rectangle.getArea());
+		System.out.println();
+		System.out.println("Perimeter: ");
+		System.out.print(rectangle.getPerimeter());
+	}
+
+}

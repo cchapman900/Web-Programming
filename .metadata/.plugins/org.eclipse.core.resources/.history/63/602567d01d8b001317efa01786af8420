@@ -1,0 +1,53 @@
+/*
+ * BMCC CIS-485
+ * Spring 2014
+ * Chris Chapman
+ * HW1 superclass
+ * 
+ * Square and Rectangle Solving Problems
+ * 
+ * Contains all utility functions needed for each subproblem
+ */
+
+import java.util.Scanner;
+
+
+public class hw1 {
+
+	//Main assets used by each problem. Rectangle for which
+	//to solve, and a Scanner to receive input from user
+	static Rectangle rectangle = new Rectangle(1, 1);
+	static Scanner scanner = new Scanner(System.in);
+	
+	//Utility class for user to input Rectangle dimensions
+	public static void getRectDimensions() {
+		System.out.println("Please enter length:");
+		rectangle.setLength(scanner.nextInt());
+		System.out.println("Please enter width:");
+		rectangle.setWidth(scanner.nextInt());
+	}
+	
+	//Utility class for user to input Rectangle dimensions which
+	//will be equal in cases of a square
+	public static void getSquareDimensions() {
+		System.out.println("Please enter side length:");
+		int side = scanner.nextInt();
+		rectangle.setLength(side);
+		rectangle.setWidth(side);
+	}
+	
+	//Utility class to display Area of Rectangle
+	public static void displayArea() {
+		System.out.println("Area: ");
+		System.out.print(rectangle.getArea());
+		System.out.println();
+	}
+
+	//Utility class to display Perimeter of Rectangle
+	public static void displayPerimeter() {
+		System.out.println("Perimeter: ");
+		System.out.println(rectangle.getPerimeter());
+		System.out.println();
+	}
+
+}
