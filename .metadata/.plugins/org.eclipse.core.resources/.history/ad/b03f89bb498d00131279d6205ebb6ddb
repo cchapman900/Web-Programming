@@ -1,0 +1,16 @@
+/*
+* BMCC CIS 485 - Web Programming
+* Spring 2014
+* Chris Chapman
+* HW1
+* 
+* hw1 SuperClass
+*/
+
+import java.util.Scanner;
+
+public class hw1 {
+	
+	Scanner scanner = new Scanner(System.in);
+	
+}

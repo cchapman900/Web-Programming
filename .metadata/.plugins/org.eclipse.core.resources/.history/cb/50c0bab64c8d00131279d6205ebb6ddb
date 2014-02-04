@@ -1,0 +1,19 @@
+/*
+* BMCC CIS 485 - Web Programming
+* Spring 2014
+* Chris Chapman
+* HW1
+* 
+* hw1 SuperClass
+*/
+
+public class hw1_1 extends hw1 {
+
+	public static void main(String[] args) {
+		
+		getRectDimensions();
+		displayAreaAndPerimeter();
+
+	}
+
+}

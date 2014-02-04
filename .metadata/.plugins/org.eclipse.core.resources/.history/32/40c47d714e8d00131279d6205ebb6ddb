@@ -1,0 +1,28 @@
+
+public class hw1_3 extends hw1 {
+	
+	//Code taken from CircleProblem example
+    public static void main(String[] args)
+    {
+		String choice=null;
+        do{
+			choice=MainMenu();
+			switch(choice)
+			{
+				case "1":  circleAreaProblem();break;
+				case "2":  circlePerimeterProblem();break;
+				case "3":  break;
+				default:break;
+			}
+		}while(!choice.equals("3"));
+        System.exit(0);
+    }
+
+    static String MainMenu()
+    {
+		System.out.println("\n\nRECTANGLE MAIN MENU\n1.Rectangle Area \n2.Rectangle Perimeter\n3.Rectangle Area and Perimeter\n4.Exit");
+		String choice=scanner.nextLine();
+		return choice;
+	}
+
+}

@@ -1,9 +1,0 @@
-import java.util.Scanner;
-
-
-
-public class hw1 {
-	Rectangle rectangle = new Rectangle(1, 1);
-	Scanner scanner = new Scanner(System.in);
-
-}

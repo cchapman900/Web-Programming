@@ -1,68 +1,44 @@
 /*
- * BMCC CIS 485 - Web Programming
- * Spring 2014
- * Chris Chapman
- * HW1
- * 
- * Rectangle Class
- */
-
+* BMCC CIS 485 - Web Programming
+* Spring 2014
+* Chris Chapman
+* HW1
+* 
+* Rectangle Class
+*/
 
 public class Rectangle {
 	
-	//Instance Variables
-	private double length;
-	private double width;
-	
-	//Constructors
-	public Rectangle(){
-		setLength(0.0);
-		width = 0.0;
+	//Instance variables
+	double length;
+	double width;
+
+	//Constructor methods
+	public Rectangle() {
+		length = 0;
+		width = 0;
 	}
 	
-	public Rectangle(double l, double w){
-		this.setLength(l);
+	public Rectangle(Double l, Double w) {
+		this.length = l;
 		this.width = w;
 	}
 	
-	//Utility functions
-	public double getArea(){
-		
-		return this.length * this.width;
+	//Setter methods
+	public void setLength(Double l) {
+		this.length = l;
 	}
 	
-	public double getPerimeter(){
-		
+	public void setWidth(Double w) {
+		this.width = w;
+	}
+	
+	//Utility getter methods
+	public Double getPerimeter() {
 		return (this.length * 2) + (this.width * 2);
 	}
 	
-	//Display Functions
-	public void displayPerimeter(){
-		System.out.print("Perimeter: ");
-		System.out.println(getPerimeter());
+	public Double getArea() {
+		return this.width * this.length;
 	}
-	
-	public void displayArea(){
-		System.out.print("Area: ");
-		System.out.println(getArea());
-	}
-	
-	//Getters and Setters
-
-	public double getLength() {
-		return length;
-	}
-	
-	public double getWidth() {
-		return width;
-	}
-
-	public void setLength(double length) {
-		this.length = length;
-	}
-	
-	public void setWidth(double width) {
-		this.width = width;
-	}
-
 }

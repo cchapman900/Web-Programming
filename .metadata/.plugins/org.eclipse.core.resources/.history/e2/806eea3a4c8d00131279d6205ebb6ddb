@@ -1,0 +1,40 @@
+/*
+* BMCC CIS 485 - Web Programming
+* Spring 2014
+* Chris Chapman
+* HW1
+* 
+* hw1 SuperClass
+*/
+
+import java.util.Scanner;
+
+public class hw1 {
+	
+	static Scanner scanner = new Scanner(System.in);
+	
+	static Rectangle rectangle = new Rectangle();
+	
+	//get shape dimensions from user input
+	public static void getRectDimensions() {
+		System.out.println("Please enter length: ");
+		rectangle.length = scanner.nextDouble(); //should add a try and catch here to handle invalid inputs
+		System.out.println("Please enter width: ");
+		rectangle.width = scanner.nextDouble();
+	}
+
+	public static void getSquareDimensions() {
+		System.out.println("Please enter side length: ");
+		rectangle.length = scanner.nextDouble();
+		rectangle.width = rectangle.width;
+	}
+	
+	//Display methods
+	public static void displayArea() {
+		System.out.format("Area: %.2f%n",rectangle.getArea());
+	}
+
+	public static void displayPerimeter() {
+		System.out.format("Perimeter: %.2f%n",rectangle.getPerimeter());
+	}
+}

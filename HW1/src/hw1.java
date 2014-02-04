@@ -1,128 +1,59 @@
 /*
- * BMCC CIS 485 - Web Programming
- * Spring 2014
- * Chris Chapman
- * HW1
- * 
- * hw1 SuperClass
- * 
- */
+* BMCC CIS 485 - Web Programming
+* Spring 2014
+* Chris Chapman
+* HW1
+* 
+* hw1 SuperClass
+*/
 
 import java.util.Scanner;
 
-
 public class hw1 {
 	
-	//Scanner to collect user input
 	static Scanner scanner = new Scanner(System.in);
 	
-	//Main Rectangle to perform calculations on
 	static Rectangle rectangle = new Rectangle();
 	
-	//Menu Title
-	static String menuTitle = null;
+	//get shape dimensions from user input
+	public static void getRectDimensions() {
+		System.out.println("Please enter length: ");
+		rectangle.length = scanner.nextDouble(); //should add a try and catch here to handle invalid inputs
+		System.out.println("Please enter width: ");
+		rectangle.width = scanner.nextDouble();
+	}
 
-	//Create Rectangle from user input
-	public static void newRectFromConsole() {
-		System.out.println("Please enter length:");
-		double length = scanner.nextDouble();
-		System.out.println("Please enter width");
-		double width = scanner.nextDouble();
-		rectangle.setLength(length);
-		rectangle.setWidth(width);
+	public static void getSquareDimensions() {
+		System.out.println("Please enter side length: ");
+		rectangle.length = scanner.nextDouble();
+		rectangle.width = rectangle.length;
 	}
 	
-	//Create Square from user input
-	public static void newSquareFromConsole() {
-		System.out.println("Please enter side length:");
-		double side = scanner.nextDouble();
-		rectangle.setLength(side);
-		rectangle.setWidth(side);
+	//Display methods
+	public static void displayArea() {
+		System.out.format("Area: %.2f%n",rectangle.getArea());
 	}
 
-	//hw1_1 Rectangle Problem default (display both Area and Perimeter)
-	public static void rectangleProblem(){
-
-		//calculate both Area and Perimeter by default
-		displayAreaAndOrPerimeter("both");
-		
-	}
-
-	//hw1_1 Rectangle Problem (display Area and/or Perimeter)
-	public static void rectangleProblem(String areaOrPerimeter){
-		
-		//Instantiate Rectangle from user input
-		newRectFromConsole(); 
-
-		displayAreaAndOrPerimeter(areaOrPerimeter);
-		
-	}
-
-	//hw1_2 Square Problem (display both Area and Perimeter)
-	public static void squareProblem(){
-		
-		//calculate both Area and Perimeter by default
-		squareProblem("both"); 
-		
-	}
-
-	//hw1_2 Square Problem (display Area and/or Perimeter)
-	public static void squareProblem(String areaOrPerimeter){
-		
-		//Instantiate Square from user input
-		newSquareFromConsole(); 
-
-		displayAreaAndOrPerimeter(areaOrPerimeter);
-		
+	public static void displayPerimeter() {
+		System.out.format("Perimeter: %.2f%n",rectangle.getPerimeter());
 	}
 	
-	//Utility function to display Area and/or Perimeter
-	public static void displayAreaAndOrPerimeter (String areaOrPerimeter){
-
-		//display Area and/or Perimeter
-		if(areaOrPerimeter != "perimeter") rectangle.displayArea();
-		if(areaOrPerimeter != "area") rectangle.displayPerimeter();
+	public static void displayAreaAndPerimeter(){
+		displayArea();
+		displayPerimeter();
 	}
 	
-	
-	//hw1_3 Rectangle Main Menu
-	public static void rectangleMainMenu(){
-		
-		int choice = 0;
-		
-		while (choice != 4) {
-			if (choice == 1){
-				rectangleProblem("perimeter");
-				System.out.println();
-				choice = 0;
-			} 
-			else if (choice == 2) {
-				rectangleProblem("area");
-				System.out.println();
-				choice = 0;
-			}
-			else if (choice == 3) {
-				rectangleProblem("both");
-				System.out.println();
-				choice = 0;
-			} 
-			else {
-				System.out.println(menuTitle);
-				System.out.println("1. Calculate Perimeter");
-				System.out.println("2. Calculate Area");
-				System.out.println("3. Calculate Area and Perimeter");
-				System.out.println("4. Exit");
-				System.out.println();
-				System.out.println("Choice (1-4):");
-				
-				choice = scanner.nextInt();
-				
-			}
-			
-		}
+	//hw1_1 Rectangle Problem
+	//Get the dimensions of a Rectangle and display the Area and Perimeter
+	public static void rectangleProblem() {
+		getRectDimensions();
+		displayAreaAndPerimeter();
 	}
 	
-	public static void squareAndRectangleSubMenu(){
-		
+	//hw1_2 Square Problem
+	//Get the dimensions of a Square and display the Area and Perimeter
+	public static void squareProblem() {
+		getSquareDimensions();
+		displayAreaAndPerimeter();
 	}
 }

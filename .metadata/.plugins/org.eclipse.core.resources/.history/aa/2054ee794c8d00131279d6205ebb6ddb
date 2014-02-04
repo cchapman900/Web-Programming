@@ -1,0 +1,11 @@
+
+public class hw1_1 extends hw1 {
+
+	public static void main(String[] args) {
+		
+		getRectDimensions();
+		displayBoth();
+
+	}
+
+}

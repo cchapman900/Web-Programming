@@ -1,0 +1,40 @@
+
+public class hw1_3 extends hw1 {
+	
+	//Code interpreted from CircleProblem example
+    public static void main(String[] args)
+    {
+		int choice=0;
+        do{
+			choice=MainMenu();
+			switch(choice)
+			{
+				case 1:  
+					getRectDimensions();
+					displayArea();
+					break;
+				case 2:  
+					getRectDimensions();
+					displayPerimeter();
+					break;
+				case 3:  
+					getRectDimensions();
+					displayAreaAndPerimeter();
+					break;
+				case 4:
+					System.out.println("Thank you!");
+					break;
+				default:break;
+			}
+		}while(choice != 4);
+        System.exit(0);
+    }
+
+    static int MainMenu()
+    {
+		System.out.println("\n\nRECTANGLE MAIN MENU\n1.Rectangle Area \n2.Rectangle Perimeter\n3.Rectangle Area and Perimeter\n4.Exit");
+		int choice=scanner.nextInt();
+		return choice;
+	}
+
+}
