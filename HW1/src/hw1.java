@@ -18,9 +18,6 @@ public class hw1 {
 	
 	//Main Rectangle to perform calculations on
 	static Rectangle rectangle = new Rectangle();
-	
-	//Menu Title
-	static String menuTitle = null;
 
 	//Create Rectangle from user input
 	public static void newRectFromConsole() {
@@ -88,41 +85,89 @@ public class hw1 {
 	//hw1_3 Rectangle Main Menu
 	public static void rectangleMainMenu(){
 		
-		int choice = 0;
+		String choice;
 		
-		while (choice != 4) {
-			if (choice == 1){
+		while (!choice.equals("4")) {
+			if (choice.equals("1")){
 				rectangleProblem("perimeter");
 				System.out.println();
-				choice = 0;
+				choice = "0";
 			} 
-			else if (choice == 2) {
+			else if (choice.equals("2")) {
 				rectangleProblem("area");
 				System.out.println();
-				choice = 0;
+				choice = "0";
 			}
-			else if (choice == 3) {
+			else if (choice.equals("3")) {
 				rectangleProblem("both");
 				System.out.println();
-				choice = 0;
+				choice = "0";
 			} 
 			else {
-				System.out.println(menuTitle);
-				System.out.println("1. Calculate Perimeter");
-				System.out.println("2. Calculate Area");
-				System.out.println("3. Calculate Area and Perimeter");
-				System.out.println("4. Exit");
-				System.out.println();
-				System.out.println("Choice (1-4):");
+				System.out.println(\n"RECTANGLE MENU"\n
+				\n"1. Calculate Perimeter"
+				\n"2. Calculate Area"
+				\n"3. Calculate Area and Perimeter"
+				\n"4. Exit"
+				\n"Choice (1-4):");
 				
-				choice = scanner.nextInt();
+				input = scanner.nextLine();
 				
 			}
 			
 		}
 	}
 	
-	public static void squareAndRectangleSubMenu(){
+	public static void mainMenu(){
+		String choice;
 		
+		switch(choice) {
+			
+			case 1:
+				problemSubMenu("Rectangle");
+				break;
+			case 2:
+				problemSubMenu("Square");
+				break;
+			case 3:
+				return;
+				break;
+				
+		}
+			
+		}
+	}
+	
+	public static void problemSubMenu(String problemType){
+		
+		String choice;
+		
+		switch (choice) {
+			
+			case 1: 
+				runProblem(problemType, "perimeter");
+				break;
+			case 2: 
+				runProblem(problemType, "area");
+				break;
+			case 3: 
+				runProblem(problemType, "both");
+				break;
+			case 4: 
+				mainMenu();
+				break;
+		}
+		
+		
+	}
+	
+	public static void runProblem (String shape, String params)
+	{
+		if (shape.equals("Rectangle"){
+			rectangleProblem(params);
+		} 
+		else if (shape.equals("Square"){
+			squareProblem(params);
+		}
 	}
 }
