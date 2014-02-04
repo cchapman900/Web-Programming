@@ -6,6 +6,7 @@
 *
 * hw1_4 Menu Based Application
 *
+<<<<<<< HEAD
 *
 */
 
@@ -113,4 +114,19 @@ public class hw1_4 extends hw1 {
 		int choice=scanner.nextInt();
 		return choice;
 	}
+=======
+* Displays main menu to select either Rectangle
+* or Square problem.
+*
+*/
+
+public class hw1_4 extends hw1 {
+
+public static void main(String[] args) {
+
+rectangleMainMenu();
+
+}
+
+>>>>>>> 02b729dc2bcebb9edc296529460edbd74df5233f
 }
